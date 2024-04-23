@@ -16,6 +16,11 @@ import HtmlWebpackPlugin from "html-webpack-plugin";
 import { aliases } from "@swc-uxp-wrappers/utils";
 import webpack from "webpack";
 
+const mode =
+ (process.env.NODE_ENV && process.env.NODE_ENV === "production")
+    ? "production"
+    : "development";
+
 /**
  * === Copy static files configuration
  */
@@ -35,7 +40,7 @@ const copyStatics = {
 };
 
 const shared = {
-  devtool: "cheap-source-map",
+  devtool: (mode === "production") ? false : "cheap-source-map",
   externals: {
     uxp: 'commonjs2 uxp',
     photoshop: 'commonjs2 photoshop',

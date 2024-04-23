@@ -32,11 +32,11 @@ This repository has been modified by sttk3 from the original. The main changes a
 
 ### Avoid EvalError that occur in `yarn watch` or `npm run watch`
 
-When generating a source-map, use settings without "eval" to prevent errors.
+When generating source maps, use a configuration without "eval" to prevent errors, for example "cheap-source-map".
 
 webpack.config.js
 ```
-  devtool: "cheap-source-map",
+  devtool: (mode === "production") ? false : "cheap-source-map",
 ```
 
 ### Avoid `Can't resolve 'photoshop'` errors
