@@ -4,6 +4,28 @@ This starter is an example of a UXP plugin that uses React and Spectrum Web Comp
 
 It is adapted from [Photoshop React-based SWC starter plugin](https://github.com/AdobeDocs/uxp-photoshop-plugin-samples/tree/main/swc-uxp-react-starter)  (since UXP v7.3), with modifications to avoid errors and to make it easier to create a new plugin. The usage is almost the same as that.
 
+## Getting started
+
+**Pre-requisites**
+1. [NodeJS](https://nodejs.org/en) (>= v 16.0.0)
+2. [Yarn package manager](https://yarnpkg.com/getting-started/install)
+3. UXP Developer Tool (UDT)
+4. UXP >= 7.3
+
+**Build and run**
+1. Start by installing the dependencies `yarn install`.
+2. Prepare the bundle using Webpack `yarn build`. You will notice a **dist** folder after this step.
+3. (Optional) `yarn watch` to automatically build the project every time you update a source file and `yarn start` to keep the plugin running and automatically build after every change.
+
+**Load the plugin into the application via UDT**
+1. Make sure the application is running and you can see it under 'Connected apps'.
+2. Click on 'Add Plugin' button and select the `manifest.json` of this plugin.
+3. Configure the `dist` folder of your plugin by using 'More' -> 'Advanced' option from the action menu `•••`
+4. Click on the ••• menu on the corresponding plugin row. Select 'Load' to view the plugin inside your application.
+5. (Optional) Select 'Watch' from plugin actions ••• to dynamically load the latest plugin changes. Note that a manifest change would need you to 'Unload' and 'Load' the plugin from scratch.
+
+You should be able to see a banner in Photoshop plugin.
+
 ## What Changed?
 
 This repository has been modified by sttk3 from the original. The main changes are as follows.
