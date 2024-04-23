@@ -1,0 +1,66 @@
+{
+  "name": "swc-uxp-react-theme",
+  "id": "swc-uxp-react-theme",
+  "version": "1.0.0",
+  "main": "index.html",
+  "manifestVersion": 5,
+  "host": {
+    "app": "PS",
+    "minVersion": "24.4"
+  },
+  "featureFlags": {
+    "enableSWCSupport": true
+  },
+  "requiredPermissions": {
+    "localFileSystem": "request"
+  },
+  "icons": [
+    {
+      "width": 48, "height": 48, "path": "icons/plugin.png", "scale": [ 1, 2 ],
+      "theme": [ "darkest", "dark", "medium", "light", "lightest" ],
+      "species": [ "pluginList" ]
+    }
+  ],
+  "entrypoints": [
+    {
+      "type": "panel",
+      "id": "themePanel",
+      "label": {
+        "default": "SWC-UXP React Theme Panel"
+      },
+      "minimumSize": {
+        "width": 230,
+        "height": 200
+      },
+      "maximumSize": {
+        "width": 2000,
+        "height": 2000
+      },
+      "preferredDockedSize": {
+        "width": 230,
+        "height": 300
+      },
+      "preferredFloatingSize": {
+        "width": 230,
+        "height": 300
+      },
+      "icons": [
+        {
+          "width": 23, "height": 23, "path": "icons/dark-panel.png", "scale": [ 1, 2 ],
+          "theme": [ "darkest", "dark", "medium" ], "species": [ "chrome" ]
+        },
+        {
+          "width": 23, "height": 23, "path": "icons/light-panel.png", "scale": [ 1, 2 ],
+          "theme": [ "light", "lightest" ], "species": [ "chrome" ]
+        }
+      ]
+    },
+    {
+      "type": "command",
+      "id": "showCurrentTheme",
+      "label": {
+        "default": "Show Current Theme"
+      }
+    }
+  ]
+}
